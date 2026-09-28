@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
+    background: #fff;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.site-header {
+    width: 100%;
+    background: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-inner {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.site-name {
+    order: 1;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo-link {
+    order: 2;
+    display: block;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #222;
+    border-radius: 50%;
+    background: #ddd;
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.site-nav {
+    width: 100%;
+    background: #ddd;
+    border-bottom: 1px solid #bbb;
+}
+
+.nav-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-inner a {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    color: #222;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+}
+
+.nav-inner a:last-child {
+    border-bottom: 0;
+}
+
+.nav-inner a:hover,
+.nav-inner a:focus {
+    background: #cfcfcf;
+}
+
+.content {
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+/*
+ * Mobile First.
+ * HTML order: links -> table -> form.
+ * Mobile visual order: table -> links -> form.
+ */
+.content-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.links-section {
+    order: 2;
+}
+
+.table-section {
+    order: 1;
+}
+
+.form-section {
+    order: 3;
+}
+
+.page-section,
+.table-section,
+.form-section {
+    margin-bottom: 35px;
+}
+
+.page-section h1,
+.table-section h2,
+.form-section h2 {
+    margin-top: 0;
+}
+
+.link-image,
+.map-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 8px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+caption {
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #777;
+    text-align: left;
+}
+
+thead th {
+    background: #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background: #f4f4f4;
+}
+
+tbody tr:nth-child(even) {
+    background: #fff;
+}
+
+form p {
+    margin: 0 0 18px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 7px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    margin: 0 0 18px;
+    padding: 10px 14px;
+    border: 1px solid #999;
+}
+
+fieldset label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+button {
+    padding: 8px 18px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.site-footer {
+    width: 100%;
+    background: #eee;
+    border-top: 1px solid #ccc;
+}
+
+.footer-inner {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+/* Планшеты и десктопы: расширяем мобильную версию */
+@media screen and (min-width: 800px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .header-inner {
+        min-height: 120px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    .site-name {
+        order: 1;
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .logo-link {
+        order: 2;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav-inner {
+        flex-direction: row;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .nav-inner a {
+        width: auto;
+        padding: 12px 22px;
+        border-right: 1px solid #bbb;
+        border-bottom: 0;
+    }
+
+    .nav-inner a:first-child {
+        border-left: 1px solid #bbb;
+    }
+
+    .content-layout {
+        flex-direction: column;
+    }
+
+    /* На широком экране порядок соответствует HTML */
+    .links-section {
+        order: 1;
+    }
+
+    .table-section {
+        order: 2;
+    }
+
+    .form-section {
+        order: 3;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    select {
+        width: 320px;
+    }
+
+    textarea {
+        width: 500px;
+    }
+
+    fieldset {
+        max-width: 500px;
+    }
+
+    fieldset label {
+        display: inline;
+        margin-right: 18px;
+    }
+}

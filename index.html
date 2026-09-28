@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа №3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="header" class="site-header">
+    <div class="container header-inner">
+        <div class="site-name">Практическая работа №3</div>
+        <a class="logo-link" href="#top" aria-label="На главную страницу">
+            <span class="logo" aria-hidden="true">WEB</span>
+        </a>
+    </div>
+</header>
+
+<nav id="menu" class="site-nav" aria-label="Главное меню">
+    <div class="container nav-inner">
+        <a href="#top">Ссылки</a>
+        <a href="#table-section">Таблица</a>
+        <a href="#form-section">Форма</a>
+    </div>
+</nav>
+
+<main id="top" class="container content">
+    <div class="content-layout">
+
+        <!-- По условию задания список ссылок находится первым в HTML-потоке. -->
+        <section class="page-section links-section">
+            <h1>Список ссылок</h1>
+            <ul>
+                <li><a href="//www.kubsu.ru">1) Абсолютная ссылка на главную сайта kubsu.ru</a></li>
+                <li><a href="https://kubsu.ru">2) Абсолютная ссылка на kubsu.ru (https)</a></li>
+                <li>
+                    <a href="https://kubsu.ru">
+                        <img class="link-image"
+                             src="https://avatars.mds.yandex.net/i?id=e73851f607546eafba9b3a4bf8f69805_l-9153855-images-thumbs&n=13"
+                             width="550" height="350"
+                             alt="Ссылка-изображение на kubsu.ru">
+                    </a>
+                </li>
+                <li><a href="/index.php">4) Сокращённая ссылка на внутреннюю страницу</a></li>
+                <li><a href="/">5) Сокращённая ссылка на главную страницу</a></li>
+                <li><a href="#form-section">6) Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="https://example.com/search?q=html&amp;lang=ru&amp;page=1">7) Ссылка с тремя параметрами</a></li>
+                <li><a href="https://example.com/user?id=12345">8) Ссылка с параметром</a></li>
+                <li><a href="page.html">9) Относительная ссылка на страницу в текущем каталоге</a></li>
+                <li><a href="about/index.html">10) Относительная ссылка на страницу в каталоге about</a></li>
+                <li><a href="../parent.html">11) Относительная ссылка на уровень выше</a></li>
+                <li><a href="../../grandparent.html">12) Относительная ссылка на два уровня выше</a></li>
+                <li>
+                    <p>13) Контекстная ссылка: узнайте больше об
+                        <a href="https://kubsu.ru/education">образовании в КубГУ</a>.
+                    </p>
+                </li>
+                <li><a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/a#attributes">14) Ссылка на фрагмент страницы</a></li>
+                <li>
+                    <img class="map-image"
+                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmOm--1aVCifxKbVBSrqzlV24T4bURpUlbUZw6yt5V0A&s=10"
+                         alt="Карта с активными областями"
+                         usemap="#example-map">
+                    <map name="example-map">
+                        <area shape="rect" coords="0,0,150,150"
+                              href="https://kubsu.ru" alt="Прямоугольная область: kubsu.ru">
+                        <area shape="circle" coords="225,75,50"
+                              href="https://example.com" alt="Круглая область: example.com">
+                    </map>
+                </li>
+                <li><a href="">16) Ссылка с пустым href</a></li>
+                <li><a href="#top">17) Ссылка без исходного href, заменённая безопасной ссылкой на начало страницы</a></li>
+                <li><a href="https://example.com/nofollow" rel="nofollow">18) Ссылка с rel="nofollow"</a></li>
+                <li><a href="noindex-page.html">19) Ссылка на страницу с noindex</a></li>
+                <li>
+                    <span>20) Нумерованный список ссылок с подписями title:</span>
+                    <ol>
+                        <li><a href="https://kubsu.ru" title="Главная страница КубГУ">КубГУ — главная</a></li>
+                        <li><a href="https://kubsu.ru/education" title="Образовательные программы КубГУ">КубГУ — образование</a></li>
+                        <li><a href="https://kubsu.ru/science" title="Наука в КубГУ">КубГУ — наука</a></li>
+                    </ol>
+                </li>
+                <li><a href="ftp://user:password@ftp.example.com/file.zip">21) FTP-ссылка с авторизацией</a></li>
+            </ul>
+        </section>
+
+        <section id="table-section" class="table-section">
+            <h2>Таблица</h2>
+            <div class="table-wrapper">
+                <table>
+                    <caption>Таблица по практической работе</caption>
+                    <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Элемент</th>
+                        <th>Описание</th>
+                        <th>Статус</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="2">1</td>
+                        <td>HTML</td>
+                        <td>Структура страницы</td>
+                        <td>Выполнено</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Оформление страницы</td>
+                        <td>Выполнено</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td colspan="2">Гиперссылки и навигация</td>
+                        <td>Выполнено</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Изображение</td>
+                        <td>Изображение с активными областями</td>
+                        <td>Выполнено</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Форма</td>
+                        <td>Поля для ввода данных</td>
+                        <td>Выполнено</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Семантическая разметка</td>
+                        <td>Header, nav, main и footer</td>
+                        <td>Выполнено</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="form-section" class="form-section">
+            <h2>Форма</h2>
+            <form action="/submit" method="post">
+                <p>
+                    <label for="fullname">ФИО:</label><br>
+                    <input type="text" id="fullname" name="fullname" required>
+                </p>
+                <p>
+                    <label for="phone">Телефон:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                </p>
+                <p>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="birthdate">Дата рождения:</label><br>
+                    <input type="date" id="birthdate" name="birthdate">
+                </p>
+                <fieldset>
+                    <legend>Пол:</legend>
+                    <label><input type="radio" id="male" name="gender" value="male"> Мужской</label>
+                    <label><input type="radio" id="female" name="gender" value="female"> Женский</label>
+                </fieldset>
+                <p>
+                    <label for="languages">Любимый язык программирования (можно выбрать несколько):</label><br>
+                    <select id="languages" name="languages[]" multiple size="8">
+                        <option value="pascal">Pascal</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="haskell">Haskell</option>
+                        <option value="clojure">Clojure</option>
+                        <option value="prolog">Prolog</option>
+                        <option value="scala">Scala</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="bio">Биография:</label><br>
+                    <textarea id="bio" name="bio" rows="7" cols="50"></textarea>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" id="contract" name="contract" value="yes">
+                        С контрактом ознакомлен(а)
+                    </label>
+                </p>
+                <p>
+                    <button type="submit">Сохранить</button>
+                </p>
+            </form>
+        </section>
+
+    </div>
+</main>
+
+<footer id="footer" class="site-footer">
+    <div class="container footer-inner">
+        <span>(с) Практическая работа №3</span>
+    </div>
+</footer>
+</body>
+</html>
